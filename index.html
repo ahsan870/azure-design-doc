@@ -2,11 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Azure Enterprise E-Commerce Architecture</title>
-    <meta http-equiv="refresh" content="0; url=azure_enterprise_architecture.html">
-    <link rel="canonical" href="azure_enterprise_architecture.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Reference Architectures</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body>
-    <p>Redirecting to <a href="azure_enterprise_architecture.html">Azure Enterprise E-Commerce Architecture</a>…</p>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+    <main class="max-w-5xl mx-auto px-4 py-16">
+        <h1 class="text-3xl font-bold text-slate-900 mb-3">Cloud Reference Architectures</h1>
+        <p class="text-slate-600 text-lg mb-10">One secure, multi-tier e-commerce platform designed on each major cloud. Each version has an interactive architecture graph, a service directory, a full design doc and migration interview prep.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="azure/index.html" class="block bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-blue-300 transition">
+                <div class="w-12 h-12 rounded-lg bg-blue-100 text-blue-700 font-bold flex items-center justify-center mb-4">Az</div>
+                <h2 class="text-xl font-bold text-slate-900 mb-2">Azure</h2>
+                <p class="text-sm text-slate-600">Front Door, App Gateway, APIM, 3 private AKS clusters, Azure SQL, Cosmos DB, hub-spoke with Azure Firewall.</p>
+                <span class="inline-block mt-4 text-sm font-semibold text-blue-700">Open →</span>
+            </a>
+            <a href="aws/index.html" class="block bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-orange-300 transition">
+                <div class="w-12 h-12 rounded-lg bg-orange-100 text-orange-700 font-bold flex items-center justify-center mb-4">AWS</div>
+                <h2 class="text-xl font-bold text-slate-900 mb-2">AWS</h2>
+                <p class="text-sm text-slate-600">CloudFront, internal ALB, private API Gateway, 3 private EKS clusters, Aurora, DynamoDB, Transit Gateway with Network Firewall.</p>
+                <span class="inline-block mt-4 text-sm font-semibold text-orange-700">Open →</span>
+            </a>
+            <a href="gcp/index.html" class="block bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-green-300 transition">
+                <div class="w-12 h-12 rounded-lg bg-green-100 text-green-700 font-bold flex items-center justify-center mb-4">GCP</div>
+                <h2 class="text-xl font-bold text-slate-900 mb-2">Google Cloud <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 align-middle">soon</span></h2>
+                <p class="text-sm text-slate-600">Global load balancer + Cloud Armor, GKE, Cloud SQL / AlloyDB, Pub/Sub, Shared VPC with Cloud NGFW.</p>
+                <span class="inline-block mt-4 text-sm font-semibold text-green-700">Preview →</span>
+            </a>
+        </div>
+    </main>
 </body>
 </html>

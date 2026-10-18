@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCP Enterprise Architecture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+    <header class="bg-white border-b border-slate-200 px-6 py-4 flex flex-wrap gap-3 items-center justify-between shadow-sm">
+        <div class="flex items-center gap-3">
+            <a href="../index.html" title="All clouds"><svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M22 22H2v-2h20v2zM12 2L2 12h3v6h14v-6h3L12 2zm0 3.8l5 5H7l5-5z"/></svg></a>
+            <h1 class="text-xl font-bold tracking-tight text-slate-900">GCP Enterprise <span class="text-green-600 font-semibold">Architecture</span></h1>
+            <nav class="flex gap-1 ml-4 bg-slate-100 p-1 rounded-lg border border-slate-200 text-sm font-semibold" aria-label="Cloud provider">
+                <a href="../azure/index.html" class="px-3 py-1.5 rounded-md text-slate-600 hover:bg-slate-200">Azure</a>
+                <a href="../aws/index.html" class="px-3 py-1.5 rounded-md text-slate-600 hover:bg-slate-200">AWS</a>
+                <a href="../gcp/index.html" class="px-3 py-1.5 rounded-md bg-green-600 text-white" aria-current="page">GCP</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-1 px-4 py-12">
+        <div class="max-w-3xl mx-auto bg-white border border-slate-200 rounded-xl shadow-sm p-8">
+            <span class="inline-block text-xs font-semibold px-2 py-1 rounded-full bg-amber-100 text-amber-800 mb-4">Coming soon</span>
+            <h2 class="text-2xl font-bold text-slate-900 mb-3">Google Cloud version in progress</h2>
+            <p class="text-slate-600 mb-6">This page will follow the same four tabs as the Azure and AWS versions: Architecture Graph, Service Intro, Readme and Interview Prep.</p>
+            <h3 class="font-semibold text-slate-800 mb-2">Planned service mapping</h3>
+            <ul class="list-disc pl-5 text-slate-600 space-y-1 text-sm">
+                <li>Edge: Global external Application Load Balancer + Cloud CDN + Cloud Armor</li>
+                <li>Private origins: Private Service Connect / internal Application Load Balancer</li>
+                <li>API gateway: Apigee X (private) or API Gateway</li>
+                <li>Compute: 3 private GKE clusters (Autopilot or Standard), GKE Workload Identity Federation</li>
+                <li>Data: Cloud SQL / AlloyDB for PostgreSQL, Firestore or Spanner, Memorystore for Valkey</li>
+                <li>Messaging: Pub/Sub with ordering keys and dead-letter topics</li>
+                <li>Network: Shared VPC hub, Cloud NGFW, Cloud NAT, Cloud DNS, Cloud Interconnect</li>
+                <li>Operations: Cloud Monitoring, Cloud Logging, Cloud Trace, Managed Service for Prometheus</li>
+                <li>Security: Organization policies, VPC Service Controls, Security Command Center, Secret Manager, Cloud KMS</li>
+                <li>Migration: Migrate to Virtual Machines, Database Migration Service, Storage Transfer Service, Google Cloud VMware Engine</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
